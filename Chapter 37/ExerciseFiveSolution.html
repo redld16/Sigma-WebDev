@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Five Solution</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_circle_down"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 800, "GRAD" 0, "opsz" 24;
+        font-size: 60px;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <style>
+      :root {
+        --color: white;
+        --bodycolor: #a5b6e9;
+        --navcolor: #0328a1;
+        --backcolor: #abcaee;
+        --shadow: 5px 5px 10px rgb(19, 10, 10);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: var(--bodycolor);
+      }
+      /* navbar */
+      header {
+        z-index: 1000;
+        position: sticky;
+        top: 0;
+      }
+      nav {
+        background-color: var(--navcolor);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li {
+        list-style: none;
+        padding: 2vh 2.6vw;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--color);
+        font-size: 20px;
+      }
+
+      /* main */
+      .boxes {
+        background-color: var(--backcolor);
+        min-height: 90vh;
+        max-width: 95vw;
+        margin: 50px auto;
+        display: flex;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .box {
+        max-height: 50%;
+        max-width: 400px;
+        border: 2px solid black;
+        margin: auto auto;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px black;
+      }
+      .box:hover {
+        box-shadow: var(--shadow);
+      }
+
+      img {
+        width: 100%;
+        height: 50%;
+        border-radius: 20px 20px 0 0;
+      }
+      h2 {
+        margin: 20px;
+      }
+      .box p {
+        margin: 20px;
+      }
+      .rectangle-box {
+        height: 40vh;
+        width: 80vw;
+        box-shadow: 2px 2px 5px black;
+        margin: 30px auto;
+        border-radius: 25px;
+        background-color: var(--backcolor);
+        font-size: 3rem;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      .rectangle-box:hover {
+        box-shadow: var(--shadow);
+      }
+
+      /* icon */
+      .icon {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        color: var(--color);
+      }
+
+      /* footer */
+      .footer {
+        background-color: var(--navcolor);
+        height: 10%;
+      }
+      .footer ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: var(--color);
+      }
+      .footer P {
+        text-align: center;
+        justify-content: center;
+        font-size: 20px;
+        color: var(--color);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">about us</a></li>
+          <li><a href="/">services</a></li>
+          <li><a href="/">contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="boxes">
+        <section class="box one">
+          <img
+            src="https://static.desygner.com/wp-content/uploads/sites/13/2022/05/04141642/Free-Stock-Photos-01.jpg"
+            alt="Random image"
+          />
+          <h2>About the Image</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            mollitia, ratione quo at nihil ab. Eius obcaecati doloremque, ea
+            molestiae rerum vero minus provident ad harum modi quas consectetur
+            cum.
+          </p>
+        </section>
+        <section class="box two">
+          <img
+            src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
+            alt="Random image"
+          />
+          <h2>About the Image</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            mollitia, ratione quo at nihil ab. Eius obcaecati doloremque, ea
+            molestiae rerum vero minus provident ad harum modi quas consectetur
+            cum.
+          </p>
+        </section>
+      </div>
+      <div class="rectangle-box">
+        <p>Welcome to this Sigma Webdev express</p>
+      </div>
+      <div class="material-symbols-outlined icon">
+        <span class="material-symbols-outlined"> arrow_circle_down </span>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <ul>
+          <li><a href="/">address</a></li>
+          <li><a href="/">email</a></li>
+        </ul>
+        <p>THANK YOU FOR VISITING US</p>
+      </div>
+    </footer>
+  </body>
+</html>

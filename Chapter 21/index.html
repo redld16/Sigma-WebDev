@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity & Cascade in CSS</title>
+    <style>
+      /* specificity is 1 */
+      h1 {
+        color: aqua;
+      }
+
+      /* specificity is 1+10=11 */
+      h1.yellow {
+        color: yellow;
+      }
+
+      /* specificity is 10 */
+      .cred {
+        color: red;
+      }
+
+      /* specificity is 10 */
+      .cpurple {
+        color: purple;
+      }
+
+      /* specificity is 100 */
+      /* #blue {
+        color: blue;
+      } */
+      /* inline style specificity is 1000 */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="blue" class="yellow cred cpurple">hi i am a h1</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+.red {
+  color: red;
+}
+.yellow {
+  color: yellow;
+}
+.bg-purple {
+  background-color: purple;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+#firstdiv {
+  text-decoration: black line-through;
+}
+#seconddiv {
+  text-decoration: greenyellow underline;
+}
+#firstspan {
+  font-weight: 900;
+}
+#secondspan {
+  font-style: italic;
+}

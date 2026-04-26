@@ -1,0 +1,198 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Card</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      .card {
+        max-width: 350px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background: white;
+        margin: 20px;
+      }
+
+      .card-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .card-content {
+        padding: 24px;
+      }
+
+      .tags {
+        margin-bottom: 12px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 6px 12px;
+        background: #e0e0e0;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-right: 8px;
+      }
+
+      h2 {
+        color: #2d3436;
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+      }
+
+      p {
+        color: #636e72;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        font-size: 0.9rem;
+      }
+
+      .read-more {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #00b894;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .read-more:hover {
+        background: #00997b;
+      }
+
+      /* Image overlay text positioning */
+      .image-container {
+        position: relative;
+      }
+
+      .tags {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image-container">
+        <img src="sample 6.jpg" alt="Lago di Braies" class="card-image" />
+        <div class="tags">
+          <span class="tag">Nature</span>
+          <span class="tag">Lake</span>
+        </div>
+      </div>
+      <div class="card-content">
+        <h2>Lago di Braies</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur
+          sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature Card</title>
+    <style>
+      /* Improved version of your CSS */
+      .card {
+        width: 350px;
+        margin: 50px auto; /* Better centering */
+        border-radius: 20px;
+        border: 2px solid #e0e0e0; /* Softer border color */
+        overflow: hidden; /* Contain child elements */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        font-family: Arial, sans-serif; /* Explicit font family */
+      }
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover; /* Better image handling */
+        border-radius: 20px 20px 0 0; /* Only round top corners */
+        margin: 0; /* Remove default image margin */
+      }
+
+      /* .tags-container {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+      } */
+
+      span {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        border-radius: 20px;
+        padding: 6px 12px;
+        margin: 0 5px;
+        color: #333; /* Darker text color */
+        font-size: 0.9em;
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+      }
+
+      h2 {
+        margin: 15px;
+        color: #2d3436; /* Darker heading color */
+      }
+
+      p {
+        margin: 0 15px 15px;
+        color: #636e72; /* Better text contrast */
+        line-height: 1.5; /* Better readability */
+      }
+
+      button {
+        display: block;
+        width: 50%;
+        margin: 0 auto 15px;
+        padding: 10px 20px;
+        background-color: #00b894;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #00997b; /* Hover effect */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image-container">
+        <img src="sample 6.jpg" alt="Lago di Braies" />
+        <div class="tags-container">
+          <span>Nature</span>
+          <span>Lake</span>
+        </div>
+      </div>
+      <h2>Lago di Braies</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+        voluptatum aut consectetur esse porro aperiam dignissimos asperiores,
+        corrupti officia aliquid pariatur placeat.
+      </p>
+      <button>Read More</button>
+    </div>
+  </body>
+</html>

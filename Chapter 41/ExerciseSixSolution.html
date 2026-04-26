@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=format_bold"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 14vh;
+        cursor: pointer;
+        margin-bottom: 3rem;
+      }
+      nav ul {
+        display: flex;
+        gap: 2.5rem;
+      }
+      nav li {
+        list-style: none;
+      }
+      nav a {
+        color: #000;
+        text-decoration: none;
+      }
+      .nav-icon {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .nav-icon p {
+        font-size: 0.8rem;
+        font-weight: 600;
+        position: relative;
+        top: 1.2rem;
+        left: -5vw;
+      }
+      .icon {
+        font-size: 3.4rem;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: orange;
+      }
+      .content {
+        display: flex;
+        width: 70vw;
+        height: 40vh;
+        margin: auto;
+        align-items: start;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      /* main */
+      .first .title {
+        margin: 10px;
+        font-size: 2.5rem;
+      }
+      .stars {
+        font-size: 2rem;
+      }
+      .first .name-info {
+        margin: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .first button {
+        background-color: rgba(95, 173, 226, 0.974);
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 10px;
+        margin: 1rem;
+      }
+      .mid-name {
+        width: 60vw;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .mid-name > p {
+        font-size: 0.8rem;
+        margin: 0.2rem;
+      }
+
+      .cards {
+        width: 65vw;
+        margin: 0 auto 8rem auto;
+        flex-wrap: wrap;
+      }
+      .first-row {
+        display: flex;
+      }
+      .second-row {
+        display: flex;
+      }
+      .card {
+        background-color: ghostwhite;
+        border-radius: 1rem;
+        height: 25vh;
+        width: 18vw;
+        margin: 2rem auto;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .card-name {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        text-align: center;
+        text-align: center;
+        font-size: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .card button {
+        background-color: rgba(55, 171, 1, 0.696);
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+      }
+
+      /* footer */
+      footer {
+        background-color: aliceblue;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .detail {
+        font-size: 0.8rem;
+      }
+      .foot-icon {
+        padding: 5vh;
+        padding-left: 20vw;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-icon">
+          <a class="material-symbols-rounded icon"> format_bold </a>
+          <h1><b>UltraEdit</b></h1>
+          <p>by Embarcadero</p>
+        </div>
+
+        <div class="nav-2">
+          <ul>
+            <li><a href="/">Products</a></li>
+            <li><a href="/">For business</a></li>
+            <li><a href="/">Resources</a></li>
+            <li><a href="/">Academic Licensing</a></li>
+            <li><a href="/">Our compnay</a></li>
+            <li><a href="/">English</a></li>
+            <li><a class="material-symbols-outlined"> search </a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        <article class="first">
+          <div class="name">
+            <span class="title">Download <b>UltraEdit</b> for Windows</span>
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+          </div>
+          <div class="name-info">
+            <p>
+              Download and try UltraEdit before you buy it! This download
+              includes the full Windows version of the text editor.
+            </p>
+            <button>Download mac or linux version</button>
+          </div>
+        </article>
+      </div>
+
+      <article class="mid-name">
+        <a class="material-symbols-rounded icon"> format_bold </a>
+        <h3>Download UltraEdit</h3>
+        <p>v2024.3.0.15 (released 2025-04-25)</p>
+      </article>
+
+      <div class="cards">
+        <div class="first-row">
+          <div class="card">
+            <div class="card-name">
+              <h3>name</h3>
+            </div>
+            <button>Download 64-bit</button>
+            <p class="sha">SHA256</p>
+            <p>
+              F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932 2D91AE27
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-name">
+              <h3>name</h3>
+            </div>
+            <button>Download 64-bit</button>
+            <p class="sha">SHA256</p>
+            <p>
+              F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932 92D91AE27
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-name">
+              <h3>name</h3>
+            </div>
+            <button>Download 64-bit</button>
+            <p class="sha">SHA256</p>
+            <p>
+              F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932 92D91AE27
+            </p>
+          </div>
+        </div>
+        <div class="second-row">
+          <div class="card">
+            <div class="card-name">
+              <h3>name</h3>
+            </div>
+            <button>Download 64-bit</button>
+            <p class="sha">SHA256</p>
+            <p>
+              F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932 2D91AE27
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-name">
+              <h3>name</h3>
+            </div>
+            <button>Download 64-bit</button>
+            <p class="sha">SHA256</p>
+            <p>
+              F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932 92D91AE27
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-name">
+              <h3>name</h3>
+            </div>
+            <button>Download 64-bit</button>
+            <p class="sha">SHA256</p>
+            <p>
+              F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932 92D91AE27
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div class="details">
+          <div class="detail">
+            <h2>name</h2>
+            <p>detail 1</p>
+            <p>detail 2</p>
+            <p>detail 3</p>
+          </div>
+          <div class="detail">
+            <h2>name</h2>
+            <p>detail 1</p>
+            <p>detail 2</p>
+            <p>detail 3</p>
+          </div>
+          <div class="detail">
+            <h2>name</h2>
+            <p>detail 1</p>
+            <p>detail 2</p>
+            <p>detail 3</p>
+          </div>
+        </div>
+
+        <div class="nav-icon foot-icon">
+          <a class="material-symbols-rounded icon"> format_bold </a>
+          <h1><b>UltraEdit</b></h1>
+          <p>by Embarcadero</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container red bg-green">
+      <div class="box" style="display: flex">hey i am a box</div>
+      <div class="box">hey i am also a box</div>
+    </div>
+
+    <script>
+      //   let div = document.createElement("div");
+      //   div.innerText = "hi i am crated";
+      //   div.setAttribute("class", "created");
+      //   document.querySelector(".container").append(div);
+
+      let cont = document.querySelector(".container");
+      cont.insertAdjacentHTML("afterend", "<p><b>afterend</b></p>");
+      cont.classList.add("harry");
+      cont.classList.remove("harry");
+      cont.classList.add("flex");
+      cont.classList.toggle("red");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Exercise Five Solution - Web Development Practice"
+    />
+    <title>Exercise Five Solution</title>
+
+    <!-- External Resources -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* CSS Variables */
+      :root {
+        --primary-blue: #0328a1;
+        --secondary-blue: #abcafe;
+        --background: #a5b6e9;
+        --text-light: #ffffff;
+        --shadow: 5px 5px 10px rgba(19, 10, 10, 0.2);
+      }
+
+      /* Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: var(--background);
+        line-height: 1.6;
+      }
+
+      /* Header Styles */
+      header {
+        position: sticky;
+        top: 0;
+        background-color: var(--primary-blue);
+        padding: 1rem 0;
+        z-index: 1000;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      nav li {
+        list-style: none;
+      }
+
+      nav a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: opacity 0.3s ease;
+      }
+
+      nav a:hover {
+        opacity: 0.8;
+      }
+
+      /* Main Content Styles */
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+
+      .box {
+        flex: 1 1 300px;
+        background: var(--secondary-blue);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        min-height: 500px;
+      }
+
+      .box img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .box-content {
+        padding: 1.5rem;
+      }
+
+      /* Welcome Banner */
+      .rectangle-box {
+        background: var(--secondary-blue);
+        box-shadow: var(--shadow);
+        border-radius: 25px;
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      /* Scroll Indicator */
+      .scroll-indicator {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* Footer Styles */
+      footer {
+        background: var(--primary-blue);
+        color: var(--text-light);
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .box {
+          min-height: auto;
+        }
+
+        .rectangle-box {
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
+
+        nav ul {
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="boxes">
+        <article class="box">
+          <img
+            src="https://static.desygner.com/wp-content/uploads/sites/13/2022/05/04141642/Free-Stock-Photos-01.jpg"
+            alt="Mountain landscape with trees and lake"
+          />
+          <div class="box-content">
+            <h2>Natural Beauty</h2>
+            <p>
+              Experience the breathtaking views of pristine mountain landscapes
+              and crystal-clear lakes that inspire awe in every visitor.
+            </p>
+          </div>
+        </article>
+
+        <article class="box">
+          <img
+            src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
+            alt="Colorful bird perched on a branch"
+          />
+          <div class="box-content">
+            <h2>Wildlife Wonder</h2>
+            <p>
+              Discover the vibrant diversity of avian species in their natural
+              habitats through our carefully curated wildlife photography.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <section class="rectangle-box" aria-labelledby="welcome-heading">
+        <h1 id="welcome-heading">Welcome to Sigma WebDev Express</h1>
+      </section>
+
+      <button
+        class="scroll-indicator material-symbols-outlined"
+        aria-label="Scroll to bottom"
+      >
+        arrow_circle_down
+      </button>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#address">Our Address</a></li>
+            <li><a href="mailto:contact@example.com">Email Us</a></li>
+          </ul>
+        </nav>
+        <p>Thank you for visiting us!</p>
+      </div>
+    </footer>
+  </body>
+</html>

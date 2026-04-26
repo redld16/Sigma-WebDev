@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and Input</title>
+  </head>
+  <body>
+    <h1>Form to Apply</h1>
+    <form action="">
+      <div>
+        <label for="user">enter your username</label>
+        <input
+          type="text"
+          id="user"
+          name="user"
+          placeholder="enter your username"
+        />
+      </div>
+      <div>
+        <input type="radio" name="gender" id="male" value="male" />
+
+        <label for="male">male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+
+        <label for="female">female</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="yes" name="yes" />
+        <label for="yes">yes</label>
+        <input type="checkbox" id="no" name="no" />
+        <label for="no">no</label>
+      </div>
+
+      <div>
+        <label for="comment">comments</label>
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="enter your comment"
+          rows="4"
+          cols="50"
+        ></textarea>
+      </div>
+      <div>
+        <label for="country">select your country</label>
+        <select name="country" id="country">
+          <option value="">select your country</option>
+          <option value="country">india</option>
+          <option value="country">usa</option>
+          <option value="country">japan</option>
+        </select>
+      </div>
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

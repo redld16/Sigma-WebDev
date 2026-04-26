@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors in CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* element selector */
+      /* div {
+        background-color: red;
+      } */
+
+      /* class selector */
+      .red {
+        background-color: red;
+      }
+
+      /* id selector */
+      #bg-yellow {
+        background-color: yellow;
+      }
+
+      /* child selector */
+      div > p {
+        background-color: lightblue;
+      }
+
+      /* desendent selector */
+      div article {
+        background-color: purple;
+        color: cornsilk;
+      }
+
+      /* universal selector */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* pseudo class selectors */
+      a:visited {
+        color: yellow;
+      }
+      a:link {
+        color: green;
+      }
+      a:active {
+        background-color: gold;
+      }
+      a:hover {
+        color: teal;
+      }
+
+      p:first-child {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="one">
+      <p>i am first para</p>
+      <p>i am second para</p>
+    </main>
+    <div class="red">i am a div</div>
+    <p id="bg-yellow">i am a para</p>
+    <div>
+      <p>i am a para inside div</p>
+    </div>
+
+    <div>
+      <article>i am a article inside div</article>
+    </div>
+    <a href="https://www.youtube.com" target="_blank">go to youtube</a>
+  </body>
+</html>

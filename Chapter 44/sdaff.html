@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Seven Solution - Responsive</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"); /* Added Inter font */
+
+      * {
+        margin: 0;
+        padding: 0;
+        /* Changed font-family to Inter for consistency with instructions, with fallbacks */
+        font-family: "Inter", "Segoe UI", sans-serif;
+        box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+      }
+
+      /* Base styles (Mobile-first) */
+
+      /* Navbar */
+      header {
+        width: 100%; /* Use 100% instead of 100vw for better consistency */
+        background-color: #f8f8f8; /* Light background for header */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      }
+      .nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically by default */
+        align-items: center;
+        justify-content: center; /* Center content vertically and horizontally */
+        padding: 1rem;
+        height: auto; /* Allow height to adjust based on content */
+        gap: 1rem; /* Spacing between nav elements */
+      }
+      .nav-icon {
+        text-align: center;
+      }
+      .nav-icon img {
+        width: 100px; /* Fixed width for logo on mobile */
+        height: auto;
+      }
+      .nav-icon p {
+        font-size: 0.7rem;
+        font-weight: 600;
+        position: static; /* Remove absolute positioning for better flow */
+        margin-top: 0.2rem; /* Small margin below logo */
+      }
+      .nav-2 ul {
+        display: flex;
+        flex-direction: column; /* Stack nav links vertically on mobile */
+        gap: 0.5rem;
+        padding: 0; /* Remove default padding */
+        text-align: center;
+      }
+      .nav-2 ul li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row nowrap; /* Prevent wrapping for individual list items */
+      }
+      .nav-2 ul li a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .nav-2 ul li a:hover {
+        background-color: #e0e0e0;
+      }
+      .nav a {
+        color: #000;
+        text-decoration: none;
+      }
+      .nav-2 ul li svg {
+        margin-left: 0.5rem; /* Space between text and icon */
+      }
+
+      /* Main Content */
+      main {
+        padding: 1rem; /* Add padding to main content area */
+      }
+      .first {
+        text-align: center;
+        max-width: 100%; /* Ensure it doesn't overflow */
+        margin: 1rem auto;
+        padding: 1rem;
+      }
+      .title {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+        margin: 1rem auto;
+        padding: 0 1rem; /* Add horizontal padding */
+      }
+      .title img {
+        height: 1.5rem; /* Adjust image size for mobile */
+        width: auto; /* Maintain aspect ratio */
+        vertical-align: middle; /* Align with text */
+        margin-left: 0.5rem;
+      }
+      .title-info p {
+        font-size: 1rem; /* Smaller font size */
+        text-align: center;
+        padding: 0 1rem;
+      }
+      .first .button {
+        margin-top: 1.5rem; /* Adjust margin */
+      }
+      .first .button a {
+        font-size: 1rem; /* Smaller button font */
+        padding: 0.8rem 1.5rem; /* Adjust padding */
+        display: inline-block; /* Ensure padding works */
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column; /* Stack content vertically on mobile */
+        align-items: center;
+        justify-content: center;
+        margin: 1rem auto; /* Adjust margin for mobile */
+        max-width: 100%;
+      }
+      .content {
+        max-width: 100%; /* Ensure content takes full width */
+        padding: 0.5rem; /* Smaller padding */
+      }
+      .content .mid-name {
+        display: flex;
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .content .mid-name img {
+        width: 80px; /* Smaller image for mid-name section */
+        height: auto;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column for cards on mobile */
+        gap: 1rem; /* Smaller gap */
+        margin: 1rem auto; /* Center cards */
+        max-width: 350px; /* Limit card width on very small screens */
+      }
+      .card {
+        max-width: 100%; /* Ensure card takes full available width */
+        padding: 1rem; /* Add padding to cards */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Add subtle shadow */
+      }
+      .card .card-name {
+        font-size: 1.1rem; /* Adjust font size */
+        padding: 0 0 1rem 0;
+      }
+      .card .button a {
+        padding: 6px 10px; /* Smaller button padding */
+        font-size: 0.8rem; /* Smaller button font */
+      }
+      .card .hash {
+        font-size: 0.65rem; /* Smaller hash font */
+        margin-top: 0.8rem;
+        line-height: 1.1rem;
+      }
+      .card p {
+        font-size: 0.65rem; /* Smaller paragraph font */
+      }
+
+      /* Footer */
+      footer {
+        background-color: #f0f8ff; /* Lighter background for footer */
+        padding: 1.5rem 1rem; /* Add padding */
+        text-align: center; /* Center content */
+      }
+      .foot {
+        display: flex;
+        flex-direction: column; /* Stack footer details vertically */
+        gap: 1.5rem; /* Spacing between sections */
+      }
+      .details {
+        display: flex;
+        flex-direction: column; /* Stack detail columns vertically */
+        gap: 1rem;
+        align-items: center; /* Center detail content */
+      }
+      .detail {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .foot-icon {
+        padding: 0; /* Remove excessive padding */
+        padding-top: 1rem; /* Add some top padding */
+        padding-left: 0; /* Remove left padding */
+      }
+      .foot-icon img {
+        width: 90px; /* Adjust logo size in footer */
+      }
+
+      /* Media Queries for larger screens (Tablet and Desktop) */
+
+      /* Tablet (e.g., 768px and up) */
+      @media (min-width: 768px) {
+        .nav {
+          flex-direction: row; /* Navbar items in a row */
+          justify-content: space-between; /* Space out items */
+          padding: 1rem 2rem;
+        }
+        .nav-icon img {
+          width: 120px; /* Larger logo on tablet */
+        }
+        .nav-icon p {
+          position: relative; /* Restore relative positioning */
+          top: -1.2rem;
+          left: 6rem;
+          font-size: 0.8rem;
+        }
+        .nav-2 ul {
+          flex-direction: row; /* Nav links in a row */
+          gap: 1rem;
+        }
+        .title {
+          font-size: 2.5rem; /* Larger title on tablet */
+        }
+        .title img {
+          height: 1.8rem;
+        }
+        .title-info p {
+          font-size: 1.2rem;
+        }
+        .container {
+          margin: 2rem auto;
+          max-width: 90%; /* Wider container */
+        }
+        .content {
+          max-width: 80%; /* Wider content area */
+        }
+        .content .mid-name {
+          flex-direction: row; /* Image and text in a row */
+          justify-content: flex-start;
+          gap: 1rem;
+          text-align: left;
+        }
+        .content .mid-name img {
+          width: 100px; /* Larger image */
+        }
+        .cards {
+          grid-template-columns: repeat(2, 1fr); /* Two columns for cards */
+          gap: 1.5rem;
+          max-width: 700px; /* Adjust max-width for 2 columns */
+        }
+        .card {
+          padding: 1.5rem;
+        }
+        .card .card-name {
+          font-size: 1.2rem;
+        }
+        .card .button a {
+          padding: 8px 12px;
+          font-size: 0.9rem;
+        }
+        .card .hash {
+          font-size: 0.7rem;
+        }
+        .card p {
+          font-size: 0.7rem;
+        }
+        .details {
+          flex-direction: row; /* Footer details in a row */
+          justify-content: space-evenly;
+          gap: 1.5rem;
+        }
+        .foot-icon {
+          padding-top: 2rem;
+        }
+      }
+
+      /* Desktop (e.g., 1024px and up) */
+      @media (min-width: 1024px) {
+        .nav {
+          padding: 1.5rem 4rem;
+          height: 24vh; /* Restore original height for desktop if desired */
+        }
+        .nav-icon img {
+          width: 12vw; /* Use vw for larger screens */
+        }
+        .title {
+          font-size: 3rem; /* Original title size */
+          margin: 2.5rem auto;
+        }
+        .title img {
+          height: 2rem;
+          width: 7rem;
+        }
+        .title-info p {
+          font-size: 1.5rem;
+        }
+        .container {
+          margin: 3rem auto;
+          max-width: 70vw; /* Original max-width */
+        }
+        .content {
+          max-width: 100%; /* Content takes full width of its container */
+        }
+        .content .mid-name img {
+          width: 120px; /* Restore larger image */
+        }
+        .cards {
+          grid-template-columns: repeat(3, 1fr); /* Three columns for cards */
+          gap: 2rem;
+          max-width: 980px; /* Original max-width for cards */
+        }
+        .card {
+          max-width: 302px; /* Restore original card max-width */
+          padding: 2rem 1rem; /* Adjust padding */
+        }
+        .card .card-name {
+          font-size: 20px;
+        }
+        .card .button a {
+          padding: 8px;
+          font-size: 12px;
+        }
+        .card .hash {
+          font-size: 10px;
+        }
+        .card p {
+          font-size: 10px;
+        }
+        .details {
+          padding-top: 1rem;
+        }
+        .foot-icon {
+          padding: 5vh;
+          padding-left: 20vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="nav-icon">
+          <img
+            src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png"
+            alt="UltraEdit Logo"
+          />
+          <p>by Embarcadero</p>
+        </div>
+
+        <div class="nav-2">
+          <ul>
+            <li>
+              <a href="/">Products</a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 18"
+                width="20"
+                height="20"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <a href="/">For business</a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 18"
+                width="20"
+                height="20"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <a href="/">Resources</a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 18"
+                width="20"
+                height="20"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <a href="/">Academic Licensing</a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 18"
+                width="20"
+                height="20"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <a href="/">Our compnay</a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 18"
+                width="20"
+                height="20"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li><a href="/">English</a></li>
+            <li><a class="material-symbols-outlined"> search </a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="first">
+        <div class="title">
+          <p class="name">
+            Download <b>UltraEdit</b> for Windows
+            <img
+              src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png"
+              alt="Reviews"
+            />
+          </p>
+        </div>
+        <div class="title-info">
+          <p>
+            Download and try UltraEdit before you buy it! This download includes
+            the full Windows version of the text editor.
+          </p>
+          <div class="button">
+            <a href="ue_english_64.exe">Download mac or linux version</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="content">
+          <article class="mid-name">
+            <img
+              src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png"
+              alt="UltraEdit Icon"
+            />
+            <h3>Download UltraEdit</h3>
+            <p>v2024.3.0.15 (released 2025-04-25)</p>
+          </article>
+
+          <div class="cards">
+            <div class="card card-1">
+              <div class="card-name">
+                <h3>name</h3>
+              </div>
+              <div class="button">
+                <a href="ue_english_64.exe">Download 64-bit</a>
+              </div>
+              <div class="hash">
+                <p>SHA256</p>
+                <p>
+                  F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932
+                  2D91AE27
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-2">
+              <div class="card-name">
+                <h3>name</h3>
+              </div>
+              <div class="button">
+                <a href="ue_english_64.exe">Download 64-bit</a>
+              </div>
+              <div class="hash">
+                <p class="sha">SHA256</p>
+                <p>
+                  F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932
+                  92D91AE27
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-3">
+              <div class="card-name">
+                <h3>name</h3>
+              </div>
+              <div class="button">
+                <a href="ue_english_64.exe">Download 64-bit</a>
+              </div>
+              <div class="hash">
+                <p class="sha">SHA256</p>
+                <p>
+                  F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932
+                  92D91AE27
+                </p>
+              </div>
+            </div>
+            <div class="card card-4">
+              <div class="card-name">
+                <h3>name</h3>
+              </div>
+              <div class="button">
+                <a href="ue_english_64.exe">Download 64-bit</a>
+              </div>
+              <div class="hash">
+                <p class="sha">SHA256</p>
+                <p>
+                  F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932
+                  2D91AE27
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-5">
+              <div class="card-name">
+                <h3>name</h3>
+              </div>
+              <div class="button">
+                <a href="ue_english_64.exe">Download 64-bit</a>
+              </div>
+              <div class="hash">
+                <p class="sha">SHA256</p>
+                <p>
+                  F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932
+                  92D91AE27
+                </p>
+              </div>
+            </div>
+
+            <div class="card card-6">
+              <div class="card-name">
+                <h3>name</h3>
+              </div>
+              <div class="button">
+                <a href="ue_english_64.exe">Download 64-bit</a>
+              </div>
+              <div class="hash">
+                <p class="sha">SHA256</p>
+                <p>
+                  F710BF78A1948AA9DD9F7090192DA527097C05B9C483F455A05E932
+                  92D91AE27
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div class="details">
+          <div class="detail">
+            <h2>name</h2>
+            <p>detail 1</p>
+            <p>detail 2</p>
+            <p>detail 3</p>
+          </div>
+          <div class="detail">
+            <h2>name</h2>
+            <p>detail 1</p>
+            <p>detail 2</p>
+            <p>detail 3</p>
+          </div>
+          <div class="detail">
+            <h2>name</h2>
+            <p>detail 1</p>
+            <p>detail 2</p>
+            <p>detail 3</p>
+          </div>
+        </div>
+
+        <div class="nav-icon foot-icon">
+          <img
+            src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png"
+            alt="UltraEdit Logo"
+          />
+          <p>by Embarcadero</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

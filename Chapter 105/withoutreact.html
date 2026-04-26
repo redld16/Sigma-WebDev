@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="counter">0</div>
+    <button>Count ++</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        let number = parseInt(document.querySelector(".counter").innerHTML);
+        document.querySelector(".counter").innerHTML = number + 1;
+      });
+    </script>
+  </body>
+</html>
